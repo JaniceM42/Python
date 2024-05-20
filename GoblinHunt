@@ -1,0 +1,35 @@
+# First attempt at a quick/easy game using Python!
+# Use of the print, input, and while commands.
+# Also, storing values, value type recognition and specification, module importation, and documentation.
+
+import random
+
+number_of_doors = 5
+
+# welcome messages
+print("Welcome to the Angry Goblin Hunt")
+print("An award-winning game full of adventure and excitement (!)")
+
+# get the player's name
+player_name = input("What is your name?")
+print(player_name + ", there is a goblin hiding in one of my cupboards. Can you help me find them?")
+
+# display options to choose from
+print("|_| " * number_of_doors)
+
+goblin_position = random.randint(1, number_of_doors)
+
+keep_trying = True
+
+# primary game loop
+while keep_trying:
+    guessed_position = input("Can you guess where the goblin is hiding? Type the number of the cupboard:")
+    guessed_position = int(guessed_position)
+
+    if guessed_position == goblin_position:
+        print("Well done! You've found the goblin. Now I can get back to cooking!")
+        keep_trying = False
+    else:
+        print("No goblin here, just groceries. Let's try that again.")
+
+print("Thank you for playing!")
