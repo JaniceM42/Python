@@ -1,6 +1,7 @@
 # First attempt at a quick/easy game using Python!
 # Use of the print, input, and while commands.
 # Also, storing values, value type recognition and specification, module importation, and documentation.
+# Credit to https://thepythoncodingbook.com/
 
 import random
 
